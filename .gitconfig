@@ -1,0 +1,5 @@
+[user]
+	email = admin@pointlook.com
+	name = System Admin
+[push]
+	default = matching

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+PID=$(/bin/ps -ef | /bin/grep 7000 | /bin/grep -v grep | /usr/bin/awk '{ print $2 }')
+
+if [ "DISCONNECTED$PID" == "DISCONNECTED" ]
+then
+        echo "IoT : establishing connection to master"
+       (/usr/bin/ssh -i /home/slave/.ssh/id_rsa -fN -R 7000:localhost:22 -L 1884:localhost:1883 slave@master.pointlook.com) 2>&1 > /home/slave/log/ssh-tunnel.log &
+else
+        echo "IoT : $PID connection master => GOOD"
+fi

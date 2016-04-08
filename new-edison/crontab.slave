@@ -1,0 +1,3 @@
+* * * * * [ -x /home/slave/bin/gitpull ] && (/home/slave/bin/gitpull 2>&1 > /home/slave/log/crontab-gitpull.log) &
+* * * * * [ -x /home/slave/bin/connect-master-ssh ] && (/home/slave/bin/connect-master-ssh 2>&1 > /home/slave/log/crontab-connect-master-ssh.log) &
+* * * * * [ -x /home/slave/bin/connect-master-web ] && (/home/slave/bin/connect-master-web 2>&1 > /home/slave/log/crontab-connect-master-web.log) &

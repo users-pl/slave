@@ -1,0 +1,3 @@
+FILE=dotfiles-`whoami`.tgz
+(cd ~;tar zcf ~/private/$FILE .ssh)
+(cd ~/private;~/bin/enc $FILE)

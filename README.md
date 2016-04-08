@@ -1,1 +1,3 @@
 # slave
+----------------
+remove slaves
